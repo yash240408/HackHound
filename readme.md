@@ -42,14 +42,14 @@ The Mangalavye is an **RFID Based Restaurant Food Ordering System** ,initially m
 ##  Technologies Used:
 
 ### TOOLS
-- [PYCHARM:](https://www.jetbrains.com/pycharm/) : PYCHARM IS AN IDE USED FOR THIS.
-- [ARDUINO:](https://dart.dev/): An OPENSOURCE ELECTRONICS SYSTEM based on easy to use hardware.
+- [PYCHARM](https://www.jetbrains.com/pycharm/) : PYCHARM IS AN IDE USED FOR THIS.
+- [ARDUINO](https://dart.dev/): An OPENSOURCE ELECTRONICS SYSTEM based on easy to use hardware.
 - [POSTMAN](https://docs.swift.org/swift-book/): AN API (Application Programming interface) development tool.
 
 ### FRONTEND
 -  HTML : C'mon you know what's html for 
 -  CSS  :  Used it for styling .
-- [JAVASCRIPT:](https://developer.mozilla.org/en-US/docs/Web/JavaScript):Please Refer to Official Documentation.
+- [JAVASCRIPT](https://developer.mozilla.org/en-US/docs/Web/JavaScript):Please Refer to Official Documentation.
 
 <!-- CONTACT -->
 ## Contact
