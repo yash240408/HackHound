@@ -30,8 +30,8 @@ The Mangalavye is an **RFID Based Restaurant Food Ordering System** ,initially m
 - `Present a handy module consisting of RFID reader and microsystems which are used to generate tokens for customer..
 - 'The token is then transferred to user following with a 3d view of all the menu options.
 
-<h2 align="left" >Getting Started</h2>
-
+<h2 align="center" >Getting Started</h2>
+<hr>
  <h2 align="left" > Deployment</h2>
 - To run this project, install it locally and you'll need hardware support(Arduino) for this you'll need sensors too.
 - You can deploy the site for menu from the specific folder. It is made for:)
