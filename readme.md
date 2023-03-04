@@ -27,8 +27,8 @@ The Mangalavye is an **RFID Based Restaurant Food Ordering System** ,initially m
 
 ### Configuration
 
-- `Present a handy module consisting of RFID reader and microsystems which are used to generate tokens for customer..
-- 'The token is then transferred to user following with a 3d view of all the menu options.
+- Present a handy module consisting of RFID reader and microsystems which are used to generate tokens for customer..
+- The token is then transferred to user following with a 3d view of all the menu options.
 
 ## Getting Started
 
