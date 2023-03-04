@@ -54,7 +54,9 @@ The Mangalavye is an **RFID Based Restaurant Food Ordering System** ,initially m
 <!-- CONTACT -->
 ## Contact
 <p>
-📫 [Team Corex Revise](https://linktr.ee/corex_revise)  
+   
+📫 You can contact the team Corex Revise [here](https://linktr.ee/corex_revise)  
+   
 </a> 
 </p>
 
