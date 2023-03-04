@@ -49,7 +49,7 @@ The Mangalavye is an **RFID Based Restaurant Food Ordering System** ,initially m
 ### FRONTEND
 -  HTML : C'mon you know what's html for 
 -  CSS  :  Used it for styling .
-- [JAVASCRIPT](https://developer.mozilla.org/en-US/docs/Web/JavaScript):Please Refer to Official Documentation.
+- [JAVASCRIPT](https://developer.mozilla.org/en-US/docs/Web/JavaScript): Please Refer to Official Documentation.
 
 <!-- CONTACT -->
 ## Contact
