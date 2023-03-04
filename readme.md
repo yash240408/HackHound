@@ -33,7 +33,7 @@ The Mangalavye is an **RFID Based Restaurant Food Ordering System** ,initially m
 ## Getting Started
 
    ### Deployment
-- To run this project, install it locally and you'll need hardware support(Anrduino) for this you'll need sensors too.
+- To run this project, install it locally and you'll need hardware support(Arduino) for this you'll need sensors too.
 - You can deploy the site for menu from the specific folder. It is made for:)
      
 
