@@ -27,7 +27,7 @@ The Mangalavye is an **RFID Based Restaurant Food Ordering System** ,initially m
 
 <h2 align="left" > Configuration</h2>
 
-- `Present a handy module consisting of RFID reader and microsystems which are used to generate tokens for customer..
+- 'Present a handy module consisting of RFID reader and microsystems which are used to generate tokens for customer..
 - 'The token is then transferred to user following with a 3d view of all the menu options.
 
 <h2 align="center" >Getting Started</h2>
@@ -42,13 +42,13 @@ The Mangalavye is an **RFID Based Restaurant Food Ordering System** ,initially m
 <h2 align="left" >  Technologies Used:</h2>
 
 <h3 align="left" > TOOLS</h3>
-- [PYCHARM:](https://www.jetbrains.com/pycharm/) : PYCHARM IS AN IDE USED FOR THIS.
-- [ARDUINO:](https://dart.dev/): An OPENSOURCE ELECTRONICS SYSTEM based on easy to use hardware.
+- [PYCHARM:](https://www.jetbrains.com/pycharm/) : PYCHARM IS AN IDE USED FOR THIS.<br>
+- [ARDUINO:](https://dart.dev/): An OPENSOURCE ELECTRONICS SYSTEM based on easy to use hardware.<br>
 - [POSTMAN](https://docs.swift.org/swift-book/): AN API (Application Programming interface) development tool.
 
 <h3 align="left" > FRONTEND</h3>
--  HTML : C'mon you know what's html for 
--  CSS  :  Used it for styling .
+-  HTML : C'mon you know what's html for <br>
+-  CSS  :  Used it for styling .<br>
 - [JAVASCRIPT:](https://developer.mozilla.org/en-US/docs/Web/JavaScript):Please Refer to Official Documentation.
 
 <!-- CONTACT -->
