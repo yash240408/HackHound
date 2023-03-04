@@ -4,6 +4,9 @@
 #  Mangalavye 
 - _The first Martian restaurant on the block, where Martian hospitality meets earthly cuisine_ 
 
+![DALL·E 2023-03-04 23 50 12 - indoor diner on mars](https://user-images.githubusercontent.com/110530263/222930929-7d6a7fe7-af99-41f0-be95-42045e2c9d8f.png)
+
+
 ## Description
 
 The Mangalavye is an **RFID Based Restaurant Food Ordering System** ,initially made for 24 hour hackathon at  SRM University 
