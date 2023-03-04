@@ -33,22 +33,23 @@ The Mangalavye is an **RFID Based Restaurant Food Ordering System** ,initially m
 <h2 align="center" >Getting Started</h2>
 <hr>
  <h2 align="left" > Deployment</h2>
-- To run this project, install it locally and you'll need hardware support(Arduino) for this you'll need sensors too.
-- You can deploy the site for menu from the specific folder. It is made for:)
-     
-
-- For help getting started with IOT development, view the [online documentation](https://www.internetsociety.org/iot/), which offers help on IOT development, and a full API reference.
+ 
+ - 'To run this project, install it locally and you'll need hardware support(Arduino) for this you'll need sensors too.<br>
+- 'You can deploy the site for menu from the specific folder. It is made for:)<br>
+- 'For help getting started with IOT development, view the [online documentation](https://www.internetsociety.org/iot/), which offers help on IOT development, and a full API reference.
 
 <h2 align="left" >  Technologies Used:</h2>
 
 <h3 align="left" > TOOLS</h3>
+
 - [PYCHARM:](https://www.jetbrains.com/pycharm/) : PYCHARM IS AN IDE USED FOR THIS.<br>
 - [ARDUINO:](https://dart.dev/): An OPENSOURCE ELECTRONICS SYSTEM based on easy to use hardware.<br>
 - [POSTMAN](https://docs.swift.org/swift-book/): AN API (Application Programming interface) development tool.
 
 <h3 align="left" > FRONTEND</h3>
--  HTML : C'mon you know what's html for <br>
--  CSS  :  Used it for styling .<br>
+
+- HTML : C'mon you know what's html for <br>
+- CSS  :  Used it for styling .<br>
 - [JAVASCRIPT:](https://developer.mozilla.org/en-US/docs/Web/JavaScript):Please Refer to Official Documentation.
 
 <!-- CONTACT -->
