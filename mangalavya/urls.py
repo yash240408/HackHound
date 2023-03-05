@@ -15,6 +15,7 @@ urlpatterns=[
     path('login',views.login,name='page-login.html'),
     path('logout',views.logout,name='page-logout.html'),
     path('register',views.signup,name='page-register.html'),
+    path('signup',views.signup,name='page-register.html'),
     path('index2',views.index2,name='index2.html'),
     path('holo1',views.holo1,name='holo1.html'),
     path('holo2',views.holo2,name='holo2.html'),

@@ -149,39 +149,37 @@ def logout(request):
 @csrf_exempt
 def signup(request):
     try:
-        if request.session["log_user_email"] or request.session["log_email"] is None:
-            return render(request, 'page-register.html')
-        else:
-            if request.method == 'POST':
-                fname = request.POST.get("fname")
-                lname = request.POST.get("lname")
-                email = request.POST.get("email")
-                password = request.POST.get("password")
-                phone = request.POST.get("phone")
-                address = request.POST.get("address")
-                gender = request.POST.get("gender")
-                state = request.POST.get("state")
-                # Email Code
-                url2 = "https://stiffish-highline.000webhostapp.com/singupapi.php"
-                params1 = {
-                    'fname': fname,
-                    'lname': lname,
-                    'email': email,
-                    'password': password,
-                    'phone': phone,
-                    'address': address,
-                    'gender': gender,
-                    'state':state
-                }
+        if request.method == 'POST':
+            fname = request.POST.get("fname")
+            lname = request.POST.get("lname")
+            email = request.POST.get("email")
+            password = request.POST.get("password")
+            phone = request.POST.get("phone")
+            address = request.POST.get("address")
+            gender = request.POST.get("gender")
+            state = request.POST.get("state")
+            print(fname, lname, email, password, phone, address, gender, state)
+            # Email Code
+            url2 = "https://stiffish-highline.000webhostapp.com/singupapi.php"
+            params1 = {
+                'fname': fname,
+                'lname': lname,
+                'email': email,
+                'password': password,
+                'phone': phone,
+                'address': address,
+                'gender': gender,
+                'state':state
+            }
 
-                rtt55 = requests.post(url=url2, data=params1)
-                print(rtt55.text)
-                res = rtt55.json()
-                ev = res['error']
-                if not ev:
-                    return render(request, 'page-login.html', params1)
-            else:
-                return render(request,'page-register.html')
+            rtt55 = requests.post(url=url2, data=params1)
+            print(rtt55.text)
+            res = rtt55.json()
+            ev = res['error']
+            if not ev:
+                return render(request, 'page-login.html', params1)
+        else:
+            return render(request,'page-register.html')
     except:
         pass
     return render(request, 'page-register.html')
