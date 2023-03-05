@@ -1,5 +1,6 @@
 from django.shortcuts import redirect, render
 import requests
+from django.views.decorators.csrf import csrf_exempt, csrf_protect
 # Create your views here.
 def login(request):
     if request.method == 'POST':
@@ -28,7 +29,7 @@ def login(request):
             ustate = res['user']['STATE']
             uphone = res['user']['PHONE_NO']
 
-            # This will store information of guard.
+            # This will store information of user.
             if role == "0":
                 request.session['log_email'] = uemail
                 request.session['log_role'] = role
@@ -40,7 +41,7 @@ def login(request):
                 request.session['log_ustate'] = ustate
                 request.session['log_phone'] = uphone
                 request.session.save()
-                return redirect("guard_dashboard")
+                return redirect(index2)
 
             # This will store information of admin.
             else:
@@ -54,7 +55,7 @@ def login(request):
                 request.session['log_user_phone'] = uphone
                 request.session['log_user_role'] = role
                 request.session.save()
-                return redirect("admin_dashboard")
+                return redirect(index)
 
     try:
         if request.session["log_email"] is not None:
@@ -63,7 +64,7 @@ def login(request):
         pass
     try:
         if request.session["log_user_email"] is not None:
-            return redirect(index)
+            return render(request,"index.html")
     except:
         pass
 
@@ -74,9 +75,17 @@ def index(request):
         if request.session["log_user_email"] is None:
             return redirect(login)
         else:
-            return render(request, 'index.html')
+            url = "https://stiffish-highline.000webhostapp.com/fetchorderapi.php"
+            response = requests.get(url=url)
+            ultra_res = response.json()
+            records = {}
+            records['data'] = ultra_res
+            return render(request, 'index.html', records)
     except:
-        return render(request, 'page-login.html')
+        pass
+    return render(request, 'page-login.html')
+
+
 def profile(request):
     try:
         if request.session["log_user_email"] is None:
@@ -84,7 +93,8 @@ def profile(request):
         else:
             return render(request, 'app-profile.html')
     except:
-        return render(request, 'page-login.html')
+        pass
+    return render(request, 'page-login.html')
 
 def formedit(request):
     try:
@@ -93,7 +103,9 @@ def formedit(request):
         else:
             return render(request, 'form-validation.html')
     except:
-        return render(request,'page-login.html')
+        pass
+    return render(request,'page-login.html')
+    
 def pagelock(request):
     try:
         if request.session["log_user_email"] is None:
@@ -101,7 +113,8 @@ def pagelock(request):
         else:
             return render(request, 'page-lock.html')
     except:
-        return render(request, 'page-login.html')
+        pass
+    return render(request, 'page-login.html')
 
 def logout(request):
     try:
@@ -114,38 +127,81 @@ def logout(request):
         del request.session['log_user_ustate']
         del request.session['log_user_phone']
         del request.session['log_user_role']
+
+        
+        del request.session['log_email']
+        del request.session['log_id']
+        del request.session['log_fname']
+        del request.session['log_lname']
+        del request.session['log_gender']
+        del request.session['log_address']
+        del request.session['log_ustate']
+        del request.session['log_phone']
+        del request.session['log_role']
+
+
     except:
         pass
 
     return render(request, 'page-logout.html')
 
+
+@csrf_exempt
 def signup(request):
+    try:
+        if request.session["log_user_email"] or request.session["log_email"] is None:
+            return render(request, 'page-register.html')
+        else:
+            if request.method == 'POST':
+                fname = request.POST.get("fname")
+                lname = request.POST.get("lname")
+                email = request.POST.get("email")
+                password = request.POST.get("password")
+                phone = request.POST.get("phone")
+                address = request.POST.get("address")
+                gender = request.POST.get("gender")
+                state = request.POST.get("state")
+                # Email Code
+                url2 = "https://stiffish-highline.000webhostapp.com/singupapi.php"
+                params1 = {
+                    'fname': fname,
+                    'lname': lname,
+                    'email': email,
+                    'password': password,
+                    'phone': phone,
+                    'address': address,
+                    'gender': gender,
+                    'state':state
+                }
+
+                rtt55 = requests.post(url=url2, data=params1)
+                print(rtt55.text)
+                res = rtt55.json()
+                ev = res['error']
+                if not ev:
+                    return render(request, 'page-login.html', params1)
+            else:
+                return render(request,'page-register.html')
+    except:
+        pass
     return render(request, 'page-register.html')
+
 
 def datatable(request):
     try:
         if request.session["log_user_email"] is None:
-            return redirect(login)
+            return redirect(login)      
         else:
             url = "https://stiffish-highline.000webhostapp.com/fetchorderapi.php"
             response = requests.get(url=url)
             ultra_res = response.json()
             records = {}
             records['data'] = ultra_res
+            print(records)
             return render(request, 'table-datatable.html', records)
     except:
         pass
     return render(request, 'page-login.html')
-
-def widgets(request):
-    try:
-        if request.session["log_user_email"] is None:
-            return redirect(login)
-        else:
-            return render(request, 'widgets.html')
-    except:
-        pass
-    return render(request,'page-login.html')
 
 def page400(request):
         return render(request, 'page-error-400.html')
@@ -201,4 +257,5 @@ def index2(request):
         print(r2.text)
 
         res = r2.json()
-    return render(request, 'index2.html')
+        return render(request, 'index2.html')
+    return render(request, 'page-login.html' )

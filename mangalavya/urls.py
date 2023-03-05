@@ -6,7 +6,6 @@ urlpatterns=[
     path('data',views.datatable,name='table-datatable.html'),
     path('profile',views.profile,name='app-profile.html'),
     path('form',views.formedit,name='form-validation.html'),
-    path('alldata',views.widgets,name='widgets.html'),
     path('404',views.page404,name='page-error-404.html'),
     path('403',views.page403,name='page-error-403.html'),
     path('400',views.page400,name='page-error-400.html'),
