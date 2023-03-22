@@ -1,0 +1,15 @@
+
+{
+        "builds": [
+        {
+            "src": "hack_hound/wsgi.py",
+            "use": "@vercel/python"
+        }
+    ],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "hack_hound/wsgi.py"
+        }
+    ]
+}
